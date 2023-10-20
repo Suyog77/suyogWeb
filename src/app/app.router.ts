@@ -13,6 +13,8 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { FooterComponentComponent } from './footer-component/footer-component.component';
 import { JavaComponentComponent } from './java-component/java-component.component';
 import { DotComponentComponent } from './dot-component/dot-component.component';
+import { restComponent } from './rest/rest.component';
+
 
 //Create and export a variable called Router in the app.routing.ts, which would be a collection of all routes inside the Angular application.
 // pathMatch is specifying a strict matching of path to reach the destination page.
@@ -28,7 +30,8 @@ export const router: Routes = [
     { path: 'gallery', component: GalleryComponent },
     { path: 'footer', component: FooterComponentComponent },
     { path: 'java', component: JavaComponentComponent },
-    { path: 'DotNet', component: DotComponentComponent }
+    { path: 'DotNet', component: DotComponentComponent },
+    { path: 'rest', component: restComponent },
 ];
 //RouterModule.forRoot is for creating routes for the entire application
 //  pass the routes array in the RouterModule using RouterModule.forRoot(router)

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { routes } from './app.router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,10 @@ import { FooterComponentComponent } from './footer-component/footer-component.co
 import { JavaComponentComponent } from './java-component/java-component.component';
 import { DotComponentComponent } from './dot-component/dot-component.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { UserService } from './user.service';
+import { restComponent } from './rest/rest.component';
+
 
 @NgModule({
   declarations: [
@@ -27,15 +32,19 @@ import { ReactiveFormsModule } from '@angular/forms';
     GalleryComponent,
     FooterComponentComponent,
     JavaComponentComponent,
-    DotComponentComponent
+    DotComponentComponent,
+    restComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     routes,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    CommonModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
